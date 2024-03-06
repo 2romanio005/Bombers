@@ -6,8 +6,8 @@ void menu(HDC hdc);
 
 //DWORD WINAPI Draw(LPVOID lpparametr, HWND hWnd) {
 void Draw(HWND hWnd){
-	HDC hdc;        //создаём контекст устройства
-	PAINTSTRUCT ps; //создаём экземпляр структуры графического вывода
+	HDC hdc;        //СЃРѕР·РґР°С‘Рј РєРѕРЅС‚РµРєСЃС‚ СѓСЃС‚СЂРѕР№СЃС‚РІР°
+	PAINTSTRUCT ps; //СЃРѕР·РґР°С‘Рј СЌРєР·РµРјРїР»СЏСЂ СЃС‚СЂСѓРєС‚СѓСЂС‹ РіСЂР°С„РёС‡РµСЃРєРѕРіРѕ РІС‹РІРѕРґР°
 
 	//if (flag_play == 0){
 	//InvalidateRect(hWnd, NULL, false);
@@ -15,11 +15,11 @@ void Draw(HWND hWnd){
 
 	hdc = BeginPaint(hWnd, &ps);
 
-	if (flag_play) { // игра
+	if (flag_play) { // РёРіСЂР°
 		play(hdc);
 		//InvalidateRect(hWnd, NULL, false);
 	}
-	else {           // меню
+	else {           // РјРµРЅСЋ
 		menu(hdc);
 		//SelectObject(hdc, CreateSolidBrush(RGB(255, 0, 0)));
 		//Rectangle(hdc, 100, 100, 200, 200);
@@ -52,6 +52,6 @@ void play(HDC hdc) {
 
 
 void menu(HDC hdc){
-	// на будущее
+	// РЅР° Р±СѓРґСѓС‰РµРµ
 }
 
