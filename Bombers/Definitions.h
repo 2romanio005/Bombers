@@ -41,7 +41,7 @@
 #define max_speed 15.0
 #define improve_step_speed 1.0
 
-#define min_time_bomb 70       // * TimerDraw милисек
+#define min_time_bomb 70       // * TimerDraw РјРёР»РёСЃРµРє
 #define start_time_bomb 120
 #define max_time_bomb 240
 

@@ -43,7 +43,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 
 
-LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)  // обработка событий
+LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)  // РѕР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёР№
 {
 	switch (message)
 	{
@@ -74,7 +74,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 		Draw(hWnd);
 		break;
 		
-	//case WM_CHAR:    // символы
+	//case WM_CHAR:    // СЃРёРјРІРѕР»С‹
 	//	switch (wParam) {
 	//	case 'w':
 	//	case 'W':
@@ -305,7 +305,7 @@ void UpdatePlayInfo(HWND hWnd)
 }
 
 void CheckFin() {
-	int life = (*player1).get_life() + (*player2).get_life();   // можно записывать в разныебиты
+	int life = (*player1).get_life() + (*player2).get_life();   // РјРѕР¶РЅРѕ Р·Р°РїРёСЃС‹РІР°С‚СЊ РІ СЂР°Р·РЅС‹РµР±РёС‚С‹
 
 	if (life <= 1) {
 		FinPlay();
@@ -333,7 +333,7 @@ void FinPlay() {
 
 //	ShowWindow(StaticDrawTimer, SW_HIDE);
 
-	//int life = (*player1).get_life() + (*player2).get_life();   // можно записывать в разныебиты
+	//int life = (*player1).get_life() + (*player2).get_life();   // РјРѕР¶РЅРѕ Р·Р°РїРёСЃС‹РІР°С‚СЊ РІ СЂР°Р·РЅС‹РµР±РёС‚С‹
 
 }
 
@@ -377,7 +377,7 @@ void BuildGameObject() {
 	//C_Effect = CreateSolidBrush(RGB(221, 0, 255));
 	//C_Bomb = CreateSolidBrush(RGB(0, 0, 0));
 
-	player1 = new Player(CreateSolidBrush(RGB(255, 255, 0)));  // стрелочки
+	player1 = new Player(CreateSolidBrush(RGB(255, 255, 0)));  // СЃС‚СЂРµР»РѕС‡РєРё
 	player2 = new Player(CreateSolidBrush(RGB(0, 255, 161)));  // wasd
 
 //	(*player1).set_cord({100 * (rand() % 5 + 6) - 50, 100 * (rand() % 3 + 4) - 50});
@@ -385,8 +385,8 @@ void BuildGameObject() {
 }
 
 void BuildDrawEffecter(HWND hWnd) {
-	HDC hdc;        //создаём контекст устройства
-	PAINTSTRUCT ps; //создаём экземпляр структуры графического вывода
+	HDC hdc;        //СЃРѕР·РґР°С‘Рј РєРѕРЅС‚РµРєСЃС‚ СѓСЃС‚СЂРѕР№СЃС‚РІР°
+	PAINTSTRUCT ps; //СЃРѕР·РґР°С‘Рј СЌРєР·РµРјРїР»СЏСЂ СЃС‚СЂСѓРєС‚СѓСЂС‹ РіСЂР°С„РёС‡РµСЃРєРѕРіРѕ РІС‹РІРѕРґР°
 
 	hdc = BeginPaint(hWnd, &ps);
 	hdcMem = CreateCompatibleDC(hdc);

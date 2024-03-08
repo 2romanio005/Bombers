@@ -245,10 +245,10 @@ void Bomb::Detonation()
 
 	IBroken = 1;
 
-	for (int i = this->map_cord.first + 1; i <= this->map_cord.first + this->radius; i++)   { if (CellDetonation(i, this->map_cord.second)) break; }     // âïðàâî
-	for (int i = this->map_cord.first - 1; i >= this->map_cord.first - this->radius; i--)   { if (CellDetonation(i, this->map_cord.second)) break; }	  // âëåâî
-	for (int i = this->map_cord.second - 1; i >= this->map_cord.second - this->radius; i--) { if (CellDetonation(this->map_cord.first, i)) break;  }     // ââåðõ
-	for (int i = this->map_cord.second + 1; i <= this->map_cord.second + this->radius; i++) { if (CellDetonation(this->map_cord.first, i)) break;  }     // âíèç
+	for (int i = this->map_cord.first + 1; i <= this->map_cord.first + this->radius; i++)   { if (CellDetonation(i, this->map_cord.second)) break; }     // Ð²Ð¿Ñ€Ð°Ð²Ð¾
+	for (int i = this->map_cord.first - 1; i >= this->map_cord.first - this->radius; i--)   { if (CellDetonation(i, this->map_cord.second)) break; }	  // Ð²Ð»ÐµÐ²Ð¾
+	for (int i = this->map_cord.second - 1; i >= this->map_cord.second - this->radius; i--) { if (CellDetonation(this->map_cord.first, i)) break;  }     // Ð²Ð²ÐµÑ€Ñ…
+	for (int i = this->map_cord.second + 1; i <= this->map_cord.second + this->radius; i++) { if (CellDetonation(this->map_cord.first, i)) break;  }     // Ð²Ð½Ð¸Ð·
 
 	(*creater).improve_free_bomb(1);
 	ActiveBomb.erase({ this->timeout, this });

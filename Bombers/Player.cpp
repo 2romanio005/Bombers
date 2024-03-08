@@ -40,11 +40,11 @@ void Player::Muve()
 
 		float* wrong;
 		float  norm;
-		if (cord.first == next.first) {  // идём по y
+		if (cord.first == next.first) {  // РёРґС‘Рј РїРѕ y
 			wrong = &(cord.second);
 			norm = next.second;
 		}
-		else {							// идём по x
+		else {							// РёРґС‘Рј РїРѕ x
 			wrong = &(cord.first);      
 			norm = next.first;
 		}
@@ -106,7 +106,7 @@ void Player::MuveCommand(char type_command)
 		next = (this->stack).back();
 	}
 
-	int effect_size_cell = (this->effect == 'I' ? -size_cell : size_cell); // чтобы размернуть при инверисии
+	int effect_size_cell = (this->effect == 'I' ? -size_cell : size_cell); // С‡С‚РѕР±С‹ СЂР°Р·РјРµСЂРЅСѓС‚СЊ РїСЂРё РёРЅРІРµСЂРёСЃРёРё
 	switch (type_command) {
 	case 'U':
 		next.second -= effect_size_cell;
